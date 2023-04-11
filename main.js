@@ -1,23 +1,18 @@
-function solution(start, finish) {
+function descendingOrder(n){
+  // convert number to a string
+//   convert string to an array
+//   sort array in descending order
+//   convert array to a string
+//   convert string to a number
 
-  // declare variable called stepsToJump with value of finish minus start
-  // declare variable called jumps
-  // find remainder of stepsToJump divided by 3
-  // conditional: if remainder is 0 return stepsToJump
-  // if remainder is 2, add 2 to stepsToJump and return
-  // if remainder is 1, add 1 to stepsToJump and return
+return Number(  n.toString().split('').sort( (a, b) => b - a ).join('')  )
 
-  let stepsToJump = finish - start
-  let jumps
+}
 
-  if (stepsToJump % 3 == 0) {
-    jumps = stepsToJump / 3
-  } else if (stepsToJump % 3 == 2) {
-    jumps = Math.floor(stepsToJump / 3) + 2
-  } else if (stepsToJump % 3 == 1) {
-    jumps = Math.floor(stepsToJump / 3) + 1
-  }
+console.log(descendingOrder(123456))
 
-  return jumps
-  
-} 
+
+// parameter: n (greater than or equal to 0)
+// return: highest numerical value rearrangement of digits
+// e.g. descendingOrder(12811925)
+// results in 98522111
