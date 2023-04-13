@@ -1,18 +1,22 @@
-function descendingOrder(n){
-  // convert number to a string
-//   convert string to an array
-//   sort array in descending order
-//   convert array to a string
-//   convert string to a number
+function SeriesSum(n) {
 
-return Number(  n.toString().split('').sort( (a, b) => b - a ).join('')  )
+  let arrayIntegers = [1]
+  let arrayCompleteSeries = [1]
+
+  for (i = 0; i < n; i++) {
+    arrayIntegers.push(arrayIntegers[i] + 3)
+  }
+
+  for (i = 1; i < n; i++) {
+    arrayCompleteSeries.push(1 / arrayIntegers[i])
+  }
+  
+  // console.log(arrayCompleteSeries)
+
+  if (n == 0) {
+    return '0.00'
+  } else {
+    return arrayCompleteSeries.reduce( (acc, c) => acc + c).toFixed(2).toString()
+  }
 
 }
-
-console.log(descendingOrder(123456))
-
-
-// parameter: n (greater than or equal to 0)
-// return: highest numerical value rearrangement of digits
-// e.g. descendingOrder(12811925)
-// results in 98522111
