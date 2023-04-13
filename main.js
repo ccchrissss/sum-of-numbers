@@ -29,11 +29,6 @@ console.log(getSum(0, -1))
   // create a for loop that initializes i at the value of paramArr[0]; runs when i is less than or equal to paramArr[1]; increments by 1
   // within the for loop push i to sumArr
   // assign sum to the reduce method called upon sumArr
-  
-  
-  // parameter: a, b
-  // return: sum a + ... + b, unless a == b then return a or b
-  // getSum(2, 7) 
-  // results in 27
+
   
   
