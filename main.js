@@ -1,22 +1,39 @@
-function SeriesSum(n) {
+function getSum(a, b) {
 
-  let arrayIntegers = [1]
-  let arrayCompleteSeries = [1]
+  let sum
+  let sumArr = []
+  let paramArr = [a, b]
 
-  for (i = 0; i < n; i++) {
-    arrayIntegers.push(arrayIntegers[i] + 3)
+  paramArr.sort( (a, b) => a - b )
+  // console.log('paramArr: ', paramArr)
+
+  for (i = paramArr[0]; i <= paramArr[1]; i++) {
+    sumArr.push(i)
+    // console.log('sumArr: ', sumArr)
   }
 
-  for (i = 1; i < n; i++) {
-    arrayCompleteSeries.push(1 / arrayIntegers[i])
-  }
-  
-  // console.log(arrayCompleteSeries)
+  sum = sumArr.reduce( (acc, c) => acc + c, 0)
 
-  if (n == 0) {
-    return '0.00'
-  } else {
-    return arrayCompleteSeries.reduce( (acc, c) => acc + c).toFixed(2).toString()
-  }
+  return sum
 
 }
+
+console.log(getSum(0, -1))
+
+
+
+  // declare an empty variable called sum
+  // declare an empty array called sumArr
+  // declare an array called paramArr that contains a, b
+  // sort paramArr in ascending order
+  // create a for loop that initializes i at the value of paramArr[0]; runs when i is less than or equal to paramArr[1]; increments by 1
+  // within the for loop push i to sumArr
+  // assign sum to the reduce method called upon sumArr
+  
+  
+  // parameter: a, b
+  // return: sum a + ... + b, unless a == b then return a or b
+  // getSum(2, 7) 
+  // results in 27
+  
+  
